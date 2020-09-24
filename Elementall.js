@@ -17,6 +17,7 @@ describe("Element All understanding",function(){
         add(789,18)
         add(8,64)
         add(9,0)
+        add(65,99)
 
 
         element.all(by.repeater("result in memory")).each(function(item){
