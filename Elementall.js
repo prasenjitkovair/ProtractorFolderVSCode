@@ -1,19 +1,22 @@
 describe("Element All understanding",function(){
 
+    function add(a,b)
+    {
+        element(by.model("first")).sendKeys(a);
+        element(by.model("second")).sendKeys(b)
+        element(by.id("gobutton")).click()
+    }
+
     it("All Understanding 1",function(){
 
         browser.get("http://juliemr.github.io/protractor-demo/");
-        element(by.model("first")).sendKeys("10");
-        element(by.model("second")).sendKeys("765")
-        element(by.id("gobutton")).click()
-
-        element(by.model("first")).sendKeys("45");
-        element(by.model("second")).sendKeys("87")
-        element(by.id("gobutton")).click()
-
-        element(by.model("first")).sendKeys("4");
-        element(by.model("second")).sendKeys("2")
-        element(by.id("gobutton")).click()
+        add(12,4)
+        add(45,56)
+        add(3,6)
+        add(45,871)
+        add(789,18)
+        add(8,64)
+        add(9,0)
 
 
         element.all(by.repeater("result in memory")).each(function(item){
